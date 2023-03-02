@@ -22,7 +22,9 @@ class _homepageState extends State<homepage> {
               height: double.infinity,
               width: double.infinity,
               child: Image.asset(
-                "assets/images/penfold.webp", fit: BoxFit.fill,),
+                "assets/images/dark.jpg",
+                fit: BoxFit.fill,
+              ),
             ),
             Column(
               children: [
@@ -34,35 +36,53 @@ class _homepageState extends State<homepage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("/63", style: TextStyle(
-                          color: Colors.grey.shade600,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold),
+                      Text(
+                        "/63",
+                        style: TextStyle(
+                            color: Colors.grey.shade600,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
                       ),
                       Row(
                         children: [
-                          Text("ATLANTIC",
+                          Text(
+                            "ATLANTIC",
                             style: GoogleFonts.mukta(
                               textStyle: TextStyle(
                                   fontSize: 19,
                                   color: Colors.grey.shade600,
                                   fontWeight: FontWeight.bold,
-                                  letterSpacing: 1),),),
+                                  letterSpacing: 1),
+                            ),
+                          ),
                         ],
                       ),
                     ],
                   ),
                 ),
-                Transform.rotate(angle: pi / 2, child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "LIFE IS REALLY SIMPLE,BUT WE INSIST\nON MARKING IT COMPLICATED",
-                      style: GoogleFonts.rubik(color: Colors.grey.shade600,fontWeight: FontWeight.bold),)
-                  ],
+                Transform.translate(offset: Offset(150,270),
+                  child: Transform.rotate(
+                    angle: pi / 2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "LIFE IS REALLY SIMPLE,BUT WE INSIST\nON MARKING IT COMPLICATED.",
+                          style: GoogleFonts.rubik(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold
+                          ,fontSize: 25),
+                        )
+                      ],
+                    ),
+                  ),
                 ),
-                ),
-                Transform.translate(offset: Offset(100,480),child: Icon(Icons.menu,color: Colors.grey.shade600,)),
+                Transform.translate(
+                    offset: Offset(180,550),
+                    child: Icon(
+                      Icons.menu,
+                      color: Colors.white,
+                    )),
               ],
             )
           ],
@@ -71,4 +91,3 @@ class _homepageState extends State<homepage> {
     );
   }
 }
-
